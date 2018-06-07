@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+{% block head %}
+<head>
+ <link rel="stylesheet" href="Css/Css1.css" />
+ <link rel="stylesheet" href="Css/prdt.css" />
+ <link rel="stylesheet" href="Css/Acss2.css" />
+ <link rel="stylesheet" href="Css/ConCss.css" />
+ <link rel="stylesheet" href="Css/cssmenu.css" />
+ <link rel="stylesheet" href="Css/ench.css" />
+ <link rel="stylesheet" href="Css/jeton.css" />
+ <link rel="stylesheet" href="Css/Menuser.css" />
+ 
+ <link rel="Shortcut Icon" type="image/x-icon" href="Images/R'.png" />
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %}</title>
+
+{% endblock %}
+</head>
+
+<body>
+<header>
+	{% if user is defined  %}	
+		{% if  user.role == 3 %}
+			 <div class="admin"><h1><i style="color : #B8ED01;">R</i>'Enchè<i style="color : #B8ED01;">R</i>e!</h1></div>
+			 		  Administ<i style="color : #B8ED01;" >r</i>ato<i style="color : #B8ED01;" >r</i> 
+		
+		{% else %}
+	
+		<div><h1><i style="color : #B8ED01;">R</i>'Enchè<i style="color : #B8ED01;">R</i>e!</h1></div>
+    <nav><a class="modern" href="accueil.html">Accueil</a><a class="modern" href="encheres.html">Enchères</a><a class="modern" href="#">Aide&nbsp;&nbsp;&nbsp;</a></nav>
+
+		{% endif %}
+    {% else %}
+		<div><h1><i style="color : #B8ED01;">R</i>'Enchè<i style="color : #B8ED01;">R</i>e!</h1></div>
+    <nav><a class="modern" href="accueil.html">Accueil</a><a class="modern" href="encheres.html">Enchères</a><a class="modern" href="#">Aide</a><a class="modern" href="inscription.html">S'inscrire &nbsp;</a></nav>
+	{% endif %}
+   
+	
+	
+	<log> 
+	{% if user is defined %}
+       <a href="deconnexion.html" class="inline-link-1">se deconnecter</a>
+	{% else %}
+	   <a class="inline-link-1" href="seconnecter.html">Se connecter</a>
+	{% endif %}
+	</log>
+	{% if user is defined %}
+		{% if user.role == 3 %}
+		
+	<div class="cssmenu">
+		
+		 <ul>
+		   <li class=''><a href='accueil.html'><span>Home</span></a></li>
+		   <li class=''><a href='moncompte.html'><span>Mon compte</span></a></li>
+		   <li class='has-sub'><a href='#'><span>Membres</span></a>
+			  <ul>
+				 <li class='has-sub'><a href='adduser.html'><span>Ajouter un Membre</span></a></li>
+				 <li class='has-sub'><a href='updateuser.html'><span>Modifier un Membre</span></a> </li>
+				 <li class='has-sub'><a href='#'><span>Supprimer un Membre</span></a> </li>
+				 
+			  </ul>
+		   </li>
+		   <li class='has-sub'><a href='#'><span>Enchère</span></a>
+			  <ul>
+				 <li class='has-sub'><a href='addench.html'><span>Ajouter un Enchère</span></a></li>
+				 <li class='has-sub'><a href='updateench.html'><span>Modifier un Enchère</span></a> </li>
+				 <li class='has-sub'><a href='winner.html'><span>Enchere Winner</span></a> </li>
+				 <li class='has-sub'><a href='#'><span>Supprimer un Enchère</span></a> </li>
+				 <li class='has-sub'><a href='enchlist.html'><span>Liste des Enchère</span></a> </li>
+			  </ul>
+		   </li>
+		    <li class='has-sub'><a href='#'><span>Produit</span></a>
+			  <ul>
+				 <li class='has-sub'><a href='addprdt.html'><span>Ajouter un Produit</span></a></li>
+				 <li class='has-sub'><a href='updateprdt.html'><span>Modifier un Produit</span></a> </li>
+				 <li class='has-sub'><a href='#'><span>Supprimer un Produit</span></a> </li>
+				 			  </ul>
+		   </li>
+		   <li class='has-sub'><a href='#'><span>Jetons</span></a>
+			  <ul>
+				 <li class='has-sub'><a href='addjeton.html'><span>Ajouter un Pack</span></a></li>
+				 <li class='has-sub'><a href='updatejeton.html'><span>Modifier un Pack</span></a> </li>
+				 <li class='has-sub'><a href='#'><span>Supprimer un Pack</span></a> </li>
+				 <li class='has-sub'><a href='detailachat.html'><span>details d'achat</span></a> </li>
+			  </ul>
+		   </li>
+		   <li class='last has-sub'><a href='#'><span>Categorie</span></a>
+		   		<ul>
+				 <li class='has-sub'><a href='addcat.html'><span>Ajouter une Categorie</span></a></li>
+				 <li class='has-sub'><a href='#'><span>Modifier une Categorie</span></a> </li>
+				 <li class='has-sub'><a href='#'><span>Supprimer une Cate</span></a> </li>
+				 </ul>
+		   </li>
+		</ul>
+	</div>
+	{% endif %}
+	{% endif %}
+</header>
+<div id="container">
+{% if user is defined  %}
+	{% if user.role == 1  %}
+	<div id='cssmenu'>
+	<ul>
+	   <li class='active'><a href='compte.html'><span>Mon Compte</span></a></li>
+	   <li><a href='enchvisit.html'><span>Ench visitée</span></a></li>
+	   <li class='last'><a href='achat.html'><span>Mes Achats</span></a></li>
+	   
+	</ul>
+	</div>
+	{% endif %}
+{% endif %}
+{% block content %}
+
+{% endblock %}
+</div>
+<footer>
+{% block footer %}
+	&copy; Copyright 2014 by <a href="#">Belarabi Imad & Mohammed Marghichi</a>.
+{% endblock %}
+</footer>
+</body>
+</html>

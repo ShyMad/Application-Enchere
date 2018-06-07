@@ -1,0 +1,53 @@
+
+:valid {
+    box-shadow: 0 0 0 0 green;
+}
+:invalid {
+    box-shadow: 0 0 0 0 red;
+}
+div.zone_form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    position: relative;
+    width: 80%;
+}
+div.zone_form > * {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 35%;
+    height: 45px;
+}
+div.zone_form > * + * {
+    margin-left: 0;
+    font-size: 1em;
+}
+div.zone_form > * + * + * {
+    font-size: 20px;
+    margin-left: 2%;
+    width: 34%;
+    color: red;
+}
+div.zone_checkbox > div > label, div.zone_radio > div > label {
+    position: absolute;
+    width: 93%;
+}
+div.zone_radio > div > input, div.zone_checkbox > div > input {
+    left: 50%;
+    position: absolute;
+}
+form.xmlForm {
+    background: none repeat scroll 0 0 rgba(20, 20, 20, 0.2);
+    margin: auto;
+    padding: 0;
+    position: relative;
+    width: 89%;
+}
+input[class="commande"] {
+    background: none repeat scroll 0 0 #A9E664;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+}

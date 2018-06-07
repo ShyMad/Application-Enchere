@@ -1,0 +1,32 @@
+
+#container {
+    width: 800px;
+    margin: auto;
+    background: lightblue;
+    height: 1000px;
+    position: relative;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    background: red;
+    position: absolute;
+    bottom: 0px;
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background: blue;
+}
+#menu {
+    height: 300px;
+    width: 150px;
+    background: grey;
+    position: absolute;
+    top: 100px;
+    left: -50px;
+}
+#content {
+    padding: 30px;
+    margin-left: 100px;
+}

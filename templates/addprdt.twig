@@ -1,0 +1,25 @@
+{% extends "main.twig" %}
+{% block title %} Ajouter un Produit {% endblock %}
+{% block content %}
+
+	<div class="prdt clearfix">
+			<h3> Ajouter un produit  </h3>
+			<div class="info">
+			{{ add|raw }}
+			
+			
+		   </div>
+	</div>
+
+<script type="text/javascript">
+function performClick(node) {
+   var evt = document.createEvent("MouseEvents");
+   evt.initEvent("click", true, false);
+   node.dispatchEvent(evt);
+}
+$("#btnfile").click(function () {
+    $("#uplodfile").click();
+});
+</script>
+
+{% endblock %}

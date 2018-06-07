@@ -1,0 +1,72 @@
+{% extends "main.twig" %}
+{% block title %} Modifier un Produit {% endblock %}
+{% block content %}
+<script  type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+<script  type="text/javascript" src="js/jquery-ui-1.7.custom.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="templates/search.js"></script>
+
+
+    <!-- jQuery libs -->
+    
+
+    
+
+	<div class="prdt  clearfix">
+			<h3> Modifier un produit  </h3>
+			<div class="info">
+			{{ frm|raw }}
+			
+			
+		   </div>
+	</div>
+	
+<style>
+table{
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    width: 100%;
+	left:20%;
+    background: #E2E2E2;
+}
+.Stats  {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+	margin-top: 100px;
+    width: 50%;
+	margin-left:80px;
+    background: #E2E2E2;
+	font:verlinica;
+}
+thead th {
+    padding: 6px;
+    text-align: center;
+}
+td.err {
+		background-color: #e992b9;
+		color: #fff;
+		font-size: 0.75em;
+		text-align: center;
+		line-height: 1;
+	}
+th {
+    background-color: #FCB326;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+tbody th {
+	background-color: #2ea879;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(129,208,177,.3);
+}
+tbody td {
+    text-align:center;
+}
+</style>
+
+{% endblock %}

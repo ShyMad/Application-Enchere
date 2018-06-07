@@ -1,0 +1,12 @@
+{% extends "main.twig" %}
+{% block title %} Se Connecter {% endblock %}
+{% block content %}
+	<div class="Con clearfix">
+			<h3> Se Connecter  </h3>
+			<div class="info">
+			{{ form|raw }}
+			{{ msg }}
+			<br><a href="inscription.html">Vous etes nouveau?!</a>
+		</div>
+	</div>
+{% endblock %}

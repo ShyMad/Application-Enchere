@@ -1,0 +1,62 @@
+{% extends "main.twig" %}
+{% block title %} Winners d'ecnhere {% endblock %}
+{% block content %}
+	<div class="ench clearfix">
+			<h3>Winners  </h3>
+			<div class="info">
+			{{ frm|raw }}
+			
+		   </div>
+	</div>
+<style>
+table{
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    width: 100%;
+	left:20%;
+    background: #E2E2E2;
+}
+.Stats  {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+	margin-top: 100px;
+    width: 50%;
+	margin-left:80px;
+    background: #E2E2E2;
+	font:verlinica;
+}
+thead th {
+    padding-top: 9px;
+	padding-left: 9px;
+	padding-bottom: 9px;
+	padding-right: 13px;
+    text-align: center;
+}
+td.err {
+		background-color: #e992b9;
+		color: #fff;
+		font-size: 0.75em;
+		text-align: center;
+		line-height: 1;
+	}
+th {
+    background-color: #7FBFAA;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+tbody th {
+	background-color: #2ea879;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(129,208,177,.3);
+}
+tbody td {
+    text-align:center;
+}
+</style>
+{% endblock %}

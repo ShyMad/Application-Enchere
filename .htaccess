@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^$ accueil.html
+RewriteRule ^([a-z]+).html$ monControleur.php?action=$1
+

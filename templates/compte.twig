@@ -1,0 +1,20 @@
+{% extends "main.twig" %}
+{% block title %}Mon Compte {% endblock %}
+{% block content %}
+	<div class="ench clearfix">
+			<h3>Mes information General</h3>
+			<div class="info">
+			{{ cpt|raw }}
+			
+		   </div>
+	</div>
+	<div class="ench clearfix">
+			<h3> Authentification :</h3>
+			<div class="info">
+			{{ cp|raw }}
+			
+		   </div>
+	</div>
+	
+	
+{% endblock %}
